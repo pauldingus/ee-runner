@@ -1,11 +1,5 @@
-var path = require('path');
-var fs = require('fs');
 var ee = require('@google/earthengine');
 const {GoogleAuth} = require('google-auth-library');
-
-// constants
-var HOME = process.env[(process.platform == 'win32') ? 'USERPROFILE' : 'HOME'];
-var REFRESH_TOKEN_FILE = HOME + '/.config/earthengine/credentials';
 
 initialize = function (onsuccess, auth, opt_project) {
   if(auth) {
